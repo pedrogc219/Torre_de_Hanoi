@@ -58,12 +58,18 @@ public class TorreDeHanoi {
                     System.out.print("Escolha uma pilha para pop: ");
                     pilhaPop = scanner.nextInt();
 
-                    if (pilhas[pilhaPop].vazia()) {
-                        System.out.println("Pilha vazia.");
+                    try {
+                        if (pilhas[pilhaPop].vazia()) {
+                            System.out.println("Pilha vazia.");
+                            break;
+                        } else {
+                            no = pilhas[pilhaPop].pop();
+                        }
+                    } catch (Exception e) {
+                        System.out.println("Operacao invalida.");
                         break;
-                    } else {
-                        no = pilhas[pilhaPop].pop();
                     }
+
 
                     System.out.print("Escolha uma pilha para push: ");
                     pilhaPush = scanner.nextInt();
