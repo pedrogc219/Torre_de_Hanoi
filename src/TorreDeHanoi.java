@@ -47,7 +47,7 @@ public class TorreDeHanoi {
             System.out.println("\n----- COMANDOS -----");
             System.out.println("0 - Sair do jogo.");
             System.out.println("1 - Movimentar.");
-//            System.out.println("2 - Solucao automatica.");
+            System.out.println("2 - Solucao automatica.");
             System.out.print("Acao: ");
             acao = scanner.nextInt();
             switch (acao) {
@@ -101,8 +101,22 @@ public class TorreDeHanoi {
                     }
                     break;
 
-//                case 2:
-//                    break;
+                case 2:
+                    Node lixo;
+                    for (Pilha pilha : pilhas) {
+                        while (!pilha.vazia()) {
+                            lixo = pilha.pop();
+                        }
+                    }
+                    for (int i = 0; i < tamanho; i++) {
+                        pilha0.inserir(tamanho-i);
+                    }
+
+                    bot.resolver(tamanho, pilha0, pilha1, pilha2);
+
+                    lixo = null;
+                    jogo = false;
+                    break;
             }
         }
     }
