@@ -47,7 +47,7 @@ public class TorreDeHanoi {
             System.out.println("\n----- COMANDOS -----");
             System.out.println("0 - Sair do jogo.");
             System.out.println("1 - Movimentar.");
-            System.out.println("2 - Solucao automatica.");
+//            System.out.println("2 - Solucao automatica.");
             System.out.print("Acao: ");
             acao = scanner.nextInt();
             switch (acao) {
@@ -101,10 +101,8 @@ public class TorreDeHanoi {
                     }
                     break;
 
-                case 2:
-
-
-                    break;
+//                case 2:
+//                    break;
             }
         }
     }
